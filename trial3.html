@@ -284,8 +284,6 @@ body{font-family:'Space Mono',monospace;color:var(--ink);}
   /* Push chat above joystick */
   #chat-container{bottom:10rem;}
   #chat-hint{display:none;}
-  /* Hide info panel on mobile — View Art button handles it */
-  #info-panel{display:none!important;}
 }
 </style>
 </head>
@@ -878,7 +876,6 @@ let curViewTitle=null;
 function openLightbox(data){
   curViewTitle=data.title;
   document.exitPointerLock();
-  infoPanel.classList.remove('visible');
   document.getElementById('lb-title').textContent=data.title;
   document.getElementById('lb-artist').textContent=data.artist;
   document.getElementById('lb-desc-text').textContent=data.desc;
